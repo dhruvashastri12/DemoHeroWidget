@@ -31,15 +31,20 @@ class _MyDetailPageState extends State<DetailScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Hero(
-                tag: contactPOJOObj,
+                tag: 'heroimage', // For Method 1
+                
+                // tag: contactPOJOObj, // For Method 2
                 child: CircleAvatar(
                   radius: 70.0,
                   backgroundColor: Colors.black,
                   child: contactPOJOObj.flutterLogo,
+
+
                   // child: Image.network('https://picsum.photos/250?image=9'),
                   // backgroundImage: AssetImage('images/profile_vector.png'),
                 ),
               ),
+              SizedBox(height: 15.0,),
               Text(
                 contactPOJOObj.contactName,
                 style: TextStyle(
